@@ -1,3 +1,18 @@
+{% set title = "Service title" %}
+{% set pageName = "Service" %}
+{% set pageSlug  = "service" %}
+{% set breadcrumbs = [
+    {
+        'name': 'Home',
+        'url': 'index.html'
+    },
+    {
+        'name': 'Service',
+        'url': 'service.html'
+    }
+] %}
+
+
 {% extends "layouts/default.html" %}
 
 {% block content %}

@@ -1,19 +1,15 @@
 <nav class="navbar navbar-inverse">
     <div class="container">
-        <a class="navbar-brand" href="">(123) 456-7890</a>
-        <a class="navbar-brand" href="mail:name@example.com">name@example.com</a>
+        <a class="navbar-brand" href="">{{ data.phone }}</a>
+        <a class="navbar-brand" href="mail:{{ data.email }}">{{ data.email }}</a>
         <div class="collapse navbar-collapse">
+
             <ul class="nav navbar-nav navbar-right">
-                <li class="active">
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="services.html">Service</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+                {% for item in data.menu %}
+                    <li class="{{ 'active' if pageSlug == item.slug }}"><a href="{{item.url}}">{{item.title}}</a></li>
+                {% endfor %}
             </ul>
+
         </div>
     </div>
 </nav>
