@@ -54,6 +54,6 @@
     {% include 'parts/sidebar.html' %}
 
     <h3>Contact Details</h3>
-    <p><abbr title="Phone">Phone</abbr>:<a href="">{{ data.phone }}</a></p>
+    <p><abbr title="Phone">Phone</abbr>:<a href="tel:{{ data.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}">{{ data.phone }}</a></p>
     <p><abbr title="Email">Email</abbr>:<a href="mailto:{{ data.email }}">{{ data.email }}</a></p>
 {% endblock %}

@@ -1,0 +1,19 @@
+{% macro ItemList(data) %}
+
+{% for item in data %}
+
+<div class="col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-check"></i>{{ item.title }}</h4>
+        </div>
+        <div class="panel-body">
+            <p>{{ item.text }}</p>
+            <a href="{{ item.url }}" class="btn btn-default">Learn More</a>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endmacro %}

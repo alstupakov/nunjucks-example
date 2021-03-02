@@ -1,6 +1,6 @@
 <nav class="navbar navbar-inverse">
     <div class="container">
-        <a class="navbar-brand" href="">{{ data.phone }}</a>
+        <a class="navbar-brand" href="tel:{{ data.phone | replace('(', '') | replace(')', '') | replace(' ', '') | replace('-', '') }}">{{ data.phone }}</a>
         <a class="navbar-brand" href="mail:{{ data.email }}">{{ data.email }}</a>
         <div class="collapse navbar-collapse">
 

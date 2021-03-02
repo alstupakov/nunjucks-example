@@ -25,38 +25,24 @@
         <div class="col-lg-12">
             <h2 class="page-header">Service List</h2>
         </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-check"></i>Service #1</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-gift"></i>Service #2</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-compass"></i>Service #3</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
+
+        {{ macro.ItemList([
+            {
+                'title': 'Service #1',
+                'text': 'Service #1 text',
+                'url': 'Service_#1_url'
+            },
+            {
+                'title': 'Service #2',
+                'text': 'Service #2 text',
+                'url': 'Service_#2_url'
+            },
+            {
+                'title': 'Service #3',
+                'text': 'Service #3 text',
+                'url': 'Service_#3_url'
+            }
+        ]) }}
+
     </div>
 {% endblock %}
